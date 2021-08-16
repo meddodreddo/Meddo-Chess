@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <meta name="color-scheme" content="light dark">
+        <link href="css/style.css" rel="stylesheet" >
+        <title>Meddo Chess</title>
+    </head>
+              
+
+  <body runat="server" id="body" style = "zoom: 67%">
+    <div class="app">
+        <div id="deviceready" class="blink">
+            <p class="event listening"></p>
+            <p class="event received"></p>
+        </div>
+    </div>
+    <script src="js/index.js"></script>
+        
+        <div id="chessboard" class="chessboard">
+
+            <div>
+              <div class = "box"       id="a1">&#9820;</div>
+              <div class = "box black" id="b1">&#9822;	</div>
+              <div class = "box"       id="c1">&#9821;</div>
+              <div class = "box black" id="d1">&#9819;</div>
+              <div class = "box"       id="e1">&#9818;</div>
+              <div class = "box black" id="f1">&#9821;</div>
+              <div class = "box"       id="g1">&#9822;	</div>
+              <div class = "box black" id="h1">&#9820;</div>
+            </div>
+      
+            <div>
+              <div class = "box black" id="a2">&#9823; </div>
+              <div class = "box"       id="b2">&#9823; </div>
+              <div class = "box black" id="c2">&#9823; </div>
+              <div class = "box"       id="d2">&#9823; </div>
+              <div class = "box black" id="e2">&#9823; </div>
+              <div class = "box"       id="f2">&#9823; </div>
+              <div class = "box black" id="g2">&#9823; </div>
+              <div class = "box"       id="h2">&#9823; </div>
+            </div>
+      
+            <div>
+              <div class = "box"       id="a3"></div>
+              <div class = "box black" id="b3"></div>
+              <div class = "box"       id="c3"></div>
+              <div class = "box black" id="d3"></div>
+              <div class = "box"       id="e3"></div>
+              <div class = "box black" id="f3"></div>
+              <div class = "box"       id="g3"></div>
+              <div class = "box black" id="h3"></div>
+            </div>
+      
+            <div>
+              <div class = "box black" id="a4"></div>
+              <div class = "box"       id="b4"></div>
+              <div class = "box black" id="c4"></div>
+              <div class = "box"       id="d4"></div>
+              <div class = "box black" id="e4"></div>
+              <div class = "box"       id="f4" ></div>
+              <div class = "box black" id="g4"></div>
+              <div class = "box"       id="h4"></div>
+            </div>
+      
+            <div>
+              <div class = "box"       id="a5"></div>
+              <div class = "box black" id="b5"></div>
+              <div class = "box"       id="c5"></div>
+              <div class = "box black" id="d5"></div>
+              <div class = "box"       id="e5"></div>
+              <div class = "box black" id="f5"></div>
+              <div class = "box"       id="g5"></div>
+              <div class = "box black" id="h5"></div>
+            </div>
+      
+            <div>
+              <div class = "box black" id="a6"></div>
+              <div class = "box"       id="b6"></div>
+              <div class = "box black" id="c6"></div>
+              <div class = "box"       id="d6"></div>
+              <div class = "box black" id="e6"></div>
+              <div class = "box"       id="f6" ></div>
+              <div class = "box black" id="g6"></div>
+              <div class = "box"       id="h6"></div>
+            </div>
+      
+            <div>
+              <div class = "box"       id="a7">&#9817;</div>
+              <div class = "box black" id="b7">&#9817;</div>
+              <div class = "box"       id="c7">&#9817;</div>
+              <div class = "box black" id="d7">&#9817;</div>
+              <div class = "box"       id="e7">&#9817;</div>
+              <div class = "box black" id="f7">&#9817;</div>
+              <div class = "box"       id="g7">&#9817;</div>
+              <div class = "box black" id="h7">&#9817;</div>
+            </div>
+      
+            <div>
+              <div class = "box black" id="a8">&#9814;</div>
+              <div class = "box"       id="b8">&#9816;</div>
+              <div class = "box black" id="c8">&#9815;</div>
+              <div class = "box"       id="d8">&#9813;</div>
+              <div class = "box black" id="e8">&#9812;</div>
+              <div class = "box"       id="f8">&#9815;</div>
+              <div class = "box black" id="g8">&#9816;</div>
+              <div class = "box"       id="h8">&#9814;</div>
+            </div>
+      
+          </div>
+      
+          <div id = "ButtonsPart">
+              <button type="button" id="BackButton"> Back </button></br>
+              <button type="button" id="ResetButton"> New Game </button></br>
+          </div>
+      
+          <div class = "captures" id = "capturebox">
+            </br>CAPTURED</br></br>
+                White </br>
+              <div id = "whitecaptures"> </div>
+              </br></br></br></br></br></br></br>
+                Black </br>
+              <div id = "blackcaptures"> </div>
+            </div>
+      
+            <div class = "comments" id = "commentbox">
+            </div>
+      
+            <div class = "commentboxSide" id = "commentboxSide">
+            </div>
+      
+                  <div type="text" id = "fen"></br>
+                  </div>
+      
+                  <div id="fenArea">
+                    <input type="text" id="fenIn"/>
+                    <button type="button" id="SetFen">Set by FEN</button>
+                  </div>
+      
+                  <div id="computer">
+                  <input type="checkbox" id="computerCheckbox" class="checkboxComputer" name="computer" value = "on">
+                  Computer Mode<div id="emoji">
+                  </div>
+                </div>
+                
+                <script src="js/jQuery.js"></script>
+                <script src="js/definitions.js"></script>
+                <script src="js/functions.js"></script>
+                <script src="js/moves.js"></script>
+                <script src="js/gui.js"></script>
+                <script src="js/main.js"></script>
+      
+       
+        </body>
+</html>
